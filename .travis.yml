@@ -1,0 +1,19 @@
+language: minimal
+dist: xenial
+os: linux
+
+jobs:
+  include:
+    - os: linux
+    - os: linux
+      arch: ppc64le
+    - os: linux
+      arch: s390x
+    - os: linux
+      arch: arm64
+    - os: osx
+    - os: osx
+      osx_image: xcode12.2
+
+script:
+  - echo $(uname -s)-$(uname -m)
